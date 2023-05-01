@@ -5,6 +5,13 @@ class DotsController < ApplicationController
     end
   end
 
+  def update
+    @dot = Dot.find(params[:id])
+    @previous_dot = Dot.find_by(row: @dot.row, enabled: true)
+    @dot.toggle!(:enabled)
+    
+    @previous_dot.toggle!(:enabled) if @previous_dot && @previous_dot != @dot
+  end
 
   private
 
