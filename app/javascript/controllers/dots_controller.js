@@ -6,6 +6,6 @@ export default class extends Controller {
   connect() {
   }
   toggle(){
-    Turbo.navigator.submitForm(this.element.closest("form"))
+    Turbo.navigator.submitForm(this.formTarget)
   }
 }
