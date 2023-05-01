@@ -1,0 +1,3 @@
+<%= form_with url: dots_path, method: :get, data: {controller: 'dots-select', turbo_frame: 'dots', dots_select_target: 'form'} do |f| %>
+  <%= f.select :dot_limit, 1..3, {}, data: {action: 'change->dots-select#submit'} %>
+<% end %>
