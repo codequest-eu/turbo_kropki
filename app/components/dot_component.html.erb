@@ -1,0 +1,10 @@
+<%= tag.turbo_frame id: dom_id(@dot) do%>
+  <%= form_tag dot_path(@dot), method: :put do |f|%>
+    <div
+    data-controller="dots"
+    data-action="click->dots#toggle"
+      style="<%= style %>"
+      >
+    </div>
+  <% end %>
+<% end %>
