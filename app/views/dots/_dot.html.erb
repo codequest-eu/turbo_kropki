@@ -1,0 +1,15 @@
+<%= turbo_frame_tag dot do%>
+  <% dot_color = dot.enabled? ? 'green' : 'gray' %>
+  <%= form_tag dot_path(dot), method: :put do |f|%>
+    <div
+  data-controller="dots"
+  data-action="click->dots#toggle"
+      style="
+      margin: 4px;
+      border-radius: 999px;
+      width: 20px;
+      height: 20px;
+      background-color: <%= dot_color %>;">
+    </div>
+  <% end %>
+<% end %>
