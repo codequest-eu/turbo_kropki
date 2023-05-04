@@ -1,0 +1,3 @@
+<%= form_with url: dots_path, method: :get, data: { turbo_frame: 'dots' }  do |f| %>
+  <%= f.select :dot_limit, 1..3, {}, {onchange: 'this.form.requestSubmit()'} %>
+<% end %>

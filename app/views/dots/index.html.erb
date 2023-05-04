@@ -1,0 +1,11 @@
+<%= render 'dots_select' %>
+<%= render 'dots_select' %>
+
+<%= turbo_frame_tag 'dots' do %>
+  <div style="display: flex">
+    <% @dots_by_rows.each do |row| %>
+      <%= render row %>
+      <br>
+    <% end %>
+  </div>
+<% end %>
